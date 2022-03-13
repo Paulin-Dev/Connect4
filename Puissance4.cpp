@@ -244,7 +244,7 @@ int main() {
 
 /*
 
-Updates:
+Possible upgrades:
 
 Add structures to represent players
 

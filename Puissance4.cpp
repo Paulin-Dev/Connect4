@@ -244,8 +244,8 @@ int main() {
 
 /*
 
-Changer l'interface / l'affichage
+Updates:
 
-Ajouter des structures pour représenter les joueurs
+Add structures to represent players
 
 */

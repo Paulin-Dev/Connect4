@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 const int rows = 6, columns = 7;
@@ -7,7 +7,9 @@ class Game {
 private:
 
     char** grid;
-    int player;       //    1 : player 1         -1 : player 2
+    //  1 = player 1
+    // -1 = player 2
+    int player;
     char character;
 
 public:
@@ -16,11 +18,9 @@ public:
     Game(char** grid, int player) { this->grid = grid; this->player = player; };
     Game(char** grid, int player, char character) { this->grid = grid; this->player = player; this->character = character; };
     
-
     void next_player() {
         player *= -1;
     }
-
 
     void update_character() {
         if (player == 1) {
@@ -31,7 +31,6 @@ public:
         }
     }
 
-
     void fill_grid() {
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows; j++) {
@@ -39,7 +38,6 @@ public:
             }
         }
     }
-
 
     void display_grid() {
 
@@ -59,7 +57,6 @@ public:
     void display_winner() {
         cout << "\aBravo! Le joueur " << player << " vient de gagner" << endl;
     }
-
 
     bool play_in_column(int col) {
 
@@ -82,15 +79,14 @@ public:
         return check_victory(col, y);
     }
 
-
     bool choose_column() {
 
-        cout << "C'est au joueur " << player << " de jouer !\n\n";   // player's name
+        cout << "It's player " << player << "'s turn!\n\n";   // player's name
         int col = 0;
         bool done = false;
 
         do {
-            cout << "Colonne : ";
+            cout << "Column : ";
             cin >> col;
 
             if (col > 0 && col <= columns) {
@@ -104,7 +100,6 @@ public:
 
         return play_in_column(col);
     }
-
 
     bool check_col(int col) {
 
@@ -124,7 +119,6 @@ public:
         return false;
     }
 
-
     bool check_row(int row) {
 
         int counter = 0;
@@ -142,7 +136,6 @@ public:
         }
         return false;
     }
-
 
     bool check_diag(int col, int row) {
         
@@ -185,7 +178,6 @@ public:
         else { return false; }
     }
 
-
     bool check_victory(int col, int row) {
 
         return check_col(col) || check_row(row) || check_diag(col, row);
@@ -206,7 +198,6 @@ public:
     }
 };
 
-
 Game init_grid(int player) {
 
     char** grid = new char*[columns];
@@ -220,7 +211,6 @@ Game init_grid(int player) {
 
     return game;
 }
-
 
 void start_game() {
 
@@ -241,11 +231,7 @@ int main() {
     start_game();
 }
 
-
 /*
-
-Possible upgrades:
-
+Possible upgrade:
 Add structures to represent players
-
 */

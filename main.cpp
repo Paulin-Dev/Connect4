@@ -55,7 +55,7 @@ public:
     }
 
     void display_winner() {
-        cout << "\aBravo! Le joueur " << player << " vient de gagner" << endl;
+        cout << "\aCongrats! Player " << player << " just won!" << endl;
     }
 
     bool play_in_column(int col) {
@@ -214,7 +214,7 @@ Game init_grid(int player) {
 
 void start_game() {
 
-    Game game = init_grid(1);   // parameter: num of the one who starts
+    Game game = init_grid(1);   // parameter: number of the one who starts
 
     bool won = false; 
 

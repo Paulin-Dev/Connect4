@@ -43,7 +43,8 @@ public:
 
         // # : player 1
         // O : player 2
-        cout << "\x1B[2J\x1B[H\n   1     2     3     4     5     6     7\n\n";
+        system("cls")
+        cout << "\n   1     2     3     4     5     6     7\n\n";
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {

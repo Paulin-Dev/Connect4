@@ -43,7 +43,7 @@ public:
 
         // # : player 1
         // O : player 2
-        system("cls")
+        system("cls");
         cout << "\n   1     2     3     4     5     6     7\n\n";
 
         for (int i = 0; i < rows; i++) {
